@@ -1,0 +1,4 @@
+Pergi ke:
+http://localhost/phpmyadmin/
+
+Pilih menu, Import. Pilih file nya 'webspp -menu Sql.sql', Klik Go

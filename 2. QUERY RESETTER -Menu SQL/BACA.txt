@@ -1,0 +1,8 @@
+Pergi ke:
+http://localhost/phpmyadmin/
+
+Pilih menu, Import. Pilih file nya ... Misal: '0. Reset - ALL.sql', Klik Go.
+
+NOTE:
+*Untuk reset SEMUA data master, Import '0. Reset - ALL.sql'.
+*Untuk HANYA reset status lunas/ tidak nya pembayaran saja, Import file '1. Pembayaran - Ket_LUNAS.sql'.
