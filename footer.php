@@ -814,10 +814,10 @@ foreach ($arrPesan as $value) {     ?>
                 position: 'top-right',
                 content: "<?= $value ?>",
                 type: 'info',
-                delay: 10000
+                delay: 100000
             });
 
-        }, 5000);
+        }, 2000);
     </script>
 
 <?php } ?>

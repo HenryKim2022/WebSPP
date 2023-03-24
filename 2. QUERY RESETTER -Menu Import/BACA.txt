@@ -1,0 +1,12 @@
+Pergi ke:
+http://localhost/phpmyadmin/
+
+Pilih menu, Import. Pilih file nya ... Misal: '0. Reset - ALL [DELETE ALL DATA FROM ALL TABLE]', Klik Go.
+
+NOTE:
+*Untuk reset SEMUA data master, Import '0. Reset - ALL [DELETE ALL DATA FROM ALL TABLE]'.
+	Semua data pada table yang berkaitan dengan menu master akan dihapus, menyisakan table kosong.
+
+
+*Untuk HANYA reset status lunas/ tidak nya pembayaran saja, Import file '1. Pembayaran - RESET STATUS [Ket_LUNAS FROM TABLE PBAYARAN]'.
+	Semua data pada table yang berkaitan dengan pembayaran yang telah LUNAS, akan direset ke kondisi awal (BELUM BAYAR)

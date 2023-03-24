@@ -1,8 +1,0 @@
-
-/* Note:
--- YOU MUST REINPUT ALL FROM DATA MASTER MENU MANUALLY after RUNNING THIS QUERY 
---
-*/
-
-USE webspp;
-DELETE FROM pembayaran WHERE ket="LUNAS";
