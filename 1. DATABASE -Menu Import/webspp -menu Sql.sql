@@ -21,8 +21,7 @@ CREATE TABLE admin (
 );
 
 INSERT INTO admin (id_admin, nama_admin, user_admin, pass_admin) VALUES
-    (1, 'Widi Ar', 'widi', 'widi'),
-    (2, 'Admin', 'admin', 'admin');
+    (1, 'Admin', 'admin', 'admin');
 
 
 

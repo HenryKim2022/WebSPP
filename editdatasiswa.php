@@ -32,15 +32,15 @@ if (isset($_GET['id_siswa'])) {
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="dataTableSiswa" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Nis</th>
-                        <th>Nama Siswa</th>
-                        <th>Angkatan</th>
-                        <th>Kelas</th>
-                        <th>Tahun Ajaran</th>
-                        <th>Aksi</th>
+                        <th class="align-middle">Nis</th>
+                        <th class="align-middle">Nama Siswa</th>
+                        <th class="align-middle">Angkatan</th>
+                        <th class="align-middle">Kelas</th>
+                        <th class="align-middle">Tahun Ajaran</th>
+                        <th class="align-middle">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,22 +52,25 @@ if (isset($_GET['id_siswa'])) {
                     ?>
 
                         <tr>
-                            <td><?= $res['nis'] ?></td>
-                            <td><?= $res['nama'] ?></td>
-                            <td><?= $res['nama_angkatan'] ?></td>
-                            <td><?= $res['nama_kelas'] ?></td>
-                            <td><?= $res['tahun_ajaran'] ?></td>
-                            <td>
-                                <a href="editdatasiswa.php?id_siswa=<?= $res['id_siswa'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Yakin Ingin Menghapus Data?')">Hapus</a>
-                                <a href="#" class="view_data btn btn-sm btn-warning" data-toggle="modal" data-target="#ModalEditDataSiswa" id="<?php echo $res['id_siswa']; ?>">Edit</a>
-                                <a href="" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#detailModal<?php echo $res['id_siswa']; ?>" id="">Detail</a>
+                            <td class="align-middle"><?= $res['nis'] ?></td>
+                            <td class="align-middle"><?= $res['nama'] ?></td>
+                            <td class="align-middle"><?= $res['nama_angkatan'] ?></td>
+                            <td class="align-middle"><?= $res['nama_kelas'] ?></td>
+                            <td class="align-middle"><?= $res['tahun_ajaran'] ?></td>
+                            <td class="align-middle">
+                                <div class="d-flex align-content-sm-between justify-content-center align-middle">
+                                    <a href="editdatasiswa.php?id_siswa=<?= $res['id_siswa'] ?>" class="btn btn-sm btn-danger mr-2" onclick="return confirm('Apakah Yakin Ingin Menghapus Data?')"><i class="fad fa-trash"></i></a>
+                                    <a href="#" class="view_data btn btn-sm btn-warning mr-2" data-toggle="modal" data-target="#ModalEditDataSiswa" id="<?php echo $res['id_siswa']; ?>"><i class="fad fa-edit"></i></a>
+                                    <a href="" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#detailModal<?php echo $res['id_siswa']; ?>" id=""><i class="fad fa-info-square"></i></a>
+
+                                </div>
                                 <!-- Modal detail data siswa-->
                                 <div class="modal fade" id="detailModal<?php echo $res['id_siswa']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLabel">Detail Data Siswa</h5>
-                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
+                                                <i class="btn-danger fad fa-window-close" data-dismiss="modal" aria-label="Close"></i>
                                             </div>
                                             <div class="modal-body" id="detailsiswa">
                                                 <?php
@@ -166,7 +169,7 @@ if (isset($_GET['id_siswa'])) {
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Data Siswa</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
+                <i class="btn-danger fad fa-window-close" data-dismiss="modal" aria-label="Close"></i></button>
             </div>
             <div class="modal-body">
                 <form action="" method="POST">
@@ -247,7 +250,7 @@ if (isset($_GET['id_siswa'])) {
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Edit Data Siswa</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
+                <i class="btn-danger fad fa-window-close" data-dismiss="modal" aria-label="Close"></i></button>
             </div>
             <div class="modal-body" id="datasiswa">
 

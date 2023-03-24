@@ -413,6 +413,362 @@
 
 
 
+<!-- DataTable Tahun Ajaran : Hal Master Data Script -->
+<script>
+    $(document).ready(function() {
+        var table = $('#dataTableTahunAjaran').DataTable({
+            "lengthChange": false,
+            "autoWidth": true,
+            "columns": [{
+                    "width": "5%"
+                },
+                null,
+                {
+                    "width": "6%"
+                }
+            ],
+            "buttons": [{
+                    text: 'Salin',
+                    extend: 'copy',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'excelHtml5',
+                    title: "DATA_" + "<?= $namaTabel ?>",
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    className: 'hide-for-all'
+                },
+                {
+                    extend: 'pdf',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    text: 'Cetak',
+                    extend: 'print',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    className: 'hide-for-all',
+                    title: '',
+                    customize: function(win) {
+                        $(win.document.body)
+                            .css('font-size', '10pt')
+                            .prepend(
+                                '<img src="http://datatables.net/media/images/logo-fade.png" style="position:absolute; top:0; left:0;" />'
+                            )
+                        $(win.document.body).find('table')
+                            // .addClass('compact')
+                            .css('font-size', 'inherit');
+                    }
+
+                },
+                {
+                    text: 'Kolom Terlihat',
+                    extend: 'colvis'
+                }
+            ],
+            columnDefs: [{
+                targets: [],
+                visible: false,
+            }],
+        });
+        $('.dataTables_length').addClass('bs-select');
+        table.buttons().container()
+            .appendTo('#dataTableTahunAjaran_wrapper .col-md-6:eq(0)');
+
+        //// Give scroolX- without breaking header~body aligment 
+        jQuery('.dataTableTahunAjaran').wrap('<div class="dataTables_scroll" />');
+
+    });
+</script>
+
+
+
+
+
+<!-- DataTable Tahun Ajaran : Hal Master Data Script -->
+<script>
+    $(document).ready(function() {
+        var table = $('#dataTableAngkatan').DataTable({
+            "lengthChange": false,
+            "autoWidth": true,
+            "columns": [{
+                    "width": "5%"
+                },
+                null,
+                null,
+                {
+                    "width": "6%"
+                }
+            ],
+            "buttons": [{
+                    text: 'Salin',
+                    extend: 'copy',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'excelHtml5',
+                    title: "DATA_" + "<?= $namaTabel ?>",
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    className: 'hide-for-all'
+                },
+                {
+                    extend: 'pdf',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    text: 'Cetak',
+                    extend: 'print',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    className: 'hide-for-all',
+                    title: '',
+                    customize: function(win) {
+                        $(win.document.body)
+                            .css('font-size', '10pt')
+                            .prepend(
+                                '<img src="http://datatables.net/media/images/logo-fade.png" style="position:absolute; top:0; left:0;" />'
+                            )
+                        $(win.document.body).find('table')
+                            // .addClass('compact')
+                            .css('font-size', 'inherit');
+                    }
+
+                },
+                {
+                    text: 'Kolom Terlihat',
+                    extend: 'colvis'
+                }
+            ],
+            columnDefs: [{
+                targets: [],
+                visible: false,
+            }],
+        });
+        $('.dataTables_length').addClass('bs-select');
+        table.buttons().container()
+            .appendTo('#dataTableAngkatan_wrapper .col-md-6:eq(0)');
+
+        //// Give scroolX- without breaking header~body aligment 
+        jQuery('.dataTableAngkatan').wrap('<div class="dataTables_scroll" />');
+
+    });
+</script>
+
+
+
+
+<!-- DataTable Tahun Ajaran : Hal Master Data Script -->
+<script>
+    $(document).ready(function() {
+        var table = $('#dataTableKelas').DataTable({
+            "lengthChange": false,
+            "autoWidth": true,
+            "columns": [{
+                    "width": "5%"
+                },
+                null,
+                {
+                    "width": "6%"
+                }
+            ],
+            "buttons": [{
+                    text: 'Salin',
+                    extend: 'copy',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'excelHtml5',
+                    title: "DATA_" + "<?= $namaTabel ?>",
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    className: 'hide-for-all'
+                },
+                {
+                    extend: 'pdf',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    text: 'Cetak',
+                    extend: 'print',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    className: 'hide-for-all',
+                    title: '',
+                    customize: function(win) {
+                        $(win.document.body)
+                            .css('font-size', '10pt')
+                            .prepend(
+                                '<img src="http://datatables.net/media/images/logo-fade.png" style="position:absolute; top:0; left:0;" />'
+                            )
+                        $(win.document.body).find('table')
+                            // .addClass('compact')
+                            .css('font-size', 'inherit');
+                    }
+
+                },
+                {
+                    text: 'Kolom Terlihat',
+                    extend: 'colvis'
+                }
+            ],
+            columnDefs: [{
+                targets: [],
+                visible: false,
+            }],
+        });
+        $('.dataTables_length').addClass('bs-select');
+        table.buttons().container()
+            .appendTo('#dataTableKelas_wrapper .col-md-6:eq(0)');
+
+        //// Give scroolX- without breaking header~body aligment 
+        jQuery('.dataTableKelas').wrap('<div class="dataTables_scroll" />');
+
+    });
+</script>
+
+
+
+
+
+
+<!-- DataTable Tahun Ajaran : Hal Master Data Script -->
+<script>
+    $(document).ready(function() {
+        var table = $('#dataTableSiswa').DataTable({
+            "lengthChange": false,
+            "autoWidth": true,
+            "columns": [{
+                    "width": "5%"
+                },
+                null,
+                null,
+                null,
+                null,
+                {
+                    "width": "9%"
+                }
+            ],
+            "buttons": [{
+                    text: 'Salin',
+                    extend: 'copy',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    extend: 'excelHtml5',
+                    title: "DATA_" + "<?= $namaTabel ?>",
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    className: 'hide-for-all'
+                },
+                {
+                    extend: 'pdf',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    }
+                },
+                {
+                    text: 'Cetak',
+                    extend: 'print',
+                    footer: true,
+                    header: true,
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    className: 'hide-for-all',
+                    title: '',
+                    customize: function(win) {
+                        $(win.document.body)
+                            .css('font-size', '10pt')
+                            .prepend(
+                                '<img src="http://datatables.net/media/images/logo-fade.png" style="position:absolute; top:0; left:0;" />'
+                            )
+                        $(win.document.body).find('table')
+                            // .addClass('compact')
+                            .css('font-size', 'inherit');
+                    }
+
+                },
+                {
+                    text: 'Kolom Terlihat',
+                    extend: 'colvis'
+                }
+            ],
+            columnDefs: [{
+                targets: [],
+                visible: false,
+            }],
+        });
+        $('.dataTables_length').addClass('bs-select');
+        table.buttons().container()
+            .appendTo('#dataTableSiswa_wrapper .col-md-6:eq(0)');
+
+        //// Give scroolX- without breaking header~body aligment 
+        jQuery('.dataTableSiswa').wrap('<div class="dataTables_scroll" />');
+
+    });
+</script>
+
+
+
+
+
+
+
+
+
 
 <!--  -->
 <!-- DATA MASTER: CHECKING -->

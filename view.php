@@ -131,7 +131,7 @@ if (isset($_POST['id_angkatan'])) {
 ?>
   <form action="editdataangkatan.php" method="POST">
     <input type="hidden" name="id_angkatan" value="<?= $res['id_angkatan'] ?>">
-    <input type="text" name="nama_angkatan" class="form-control" value="<?= $res['nama_angkatan'] ?>">
+    <input type="text" name="nama_angkatan" class="form-control mb-2" value="<?= $res['nama_angkatan'] ?>">
     <input type="text" name="biaya" class="form-control" value="<?= $res['biaya'] ?>">
     <div class="modal-footer">
       <button id="closemodal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

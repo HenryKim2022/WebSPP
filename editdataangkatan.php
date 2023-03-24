@@ -1,28 +1,28 @@
 <?php
-$namaTabel = "DAFTAR_ANGKATAN";
-$msgRef = "hide";
-
 include 'function/function_rupiah.php';
 include 'header.php';
 include 'koneksi.php';
+
+$namaTabel = "DAFTAR_ANGKATAN";
+$msgRef = "hide";
+
+
 
 if (isset($_GET['id_angkatan'])) {
   $id_angkatan = $_GET['id_angkatan'];
   $exec = mysqli_query($conn, "DELETE FROM angkatan WHERE id_angkatan='$id_angkatan'");
   if ($exec) {
-    // echo "<script>alert('Data angkatan berhasil dihapus')
-    // document.location = 'editdataangkatan.php';
-    // </script>";
-
-    $msg_success = "<h6>Data angkatan berhasil dihapus <i class='fad fa-smile-beam'></i></h6>";
-    $msgRef = "show";
+    // $msg_success = "<h6>Data angkatan berhasil dihapus <i class='fad fa-smile-beam'></i></h6>";
+    // $msgRef = "show";
+    echo "<script>alert('Data angkatan berhasil dihapus')
+    document.location = 'editdataangkatan.php';
+    </script>";
   } else {
-    // echo "<script>alert('Data angkatan gagal dihapus')
-    // document.location = 'editdataangkatan.php';
-    // </script>";
-
-    $msg_failed = "<h6>Data angkatan gagal dihapus <i class='fad fa-smile-beam'></i></h6>";
-    $msgRef = "show";
+    // $msg_failed = "<h6>Data angkatan gagal dihapus <i class='fad fa-smile-beam'></i></h6>";
+    // $msgRef = "show";
+    echo "<script>alert('Data angkatan gagal dihapus')
+    document.location = 'editdataangkatan.php';
+    </script>";
   }
 }
 
@@ -38,13 +38,13 @@ if (isset($_GET['id_angkatan'])) {
   </div>
   <div class="card-body">
     <div class="table-responsive">
-      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+      <table class="table table-bordered" id="dataTableAngkatan" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>No</th>
-            <th>Angkatan Ke</th>
-            <th>Biaya</th>
-            <th>Aksi</th>
+            <th class="align-middle">No</th>
+            <th class="align-middle">Angkatan</th>
+            <th class="align-middle">Biaya</th>
+            <th class="align-middle">Aksi</th>
           </tr>
         </thead>
         <tbody>
@@ -57,12 +57,12 @@ if (isset($_GET['id_angkatan'])) {
           ?>
 
             <tr>
-              <td><?= $no++ ?></td>
-              <td><?= $res['nama_angkatan'] ?></td>
-              <td><?= format_rupiah($res['biaya']) ?></td>
-              <td>
-                <a href="editdataangkatan.php?id_angkatan=<?= $res['id_angkatan'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Yakin Ingin Menghapus Data?')">Hapus</a>
-                <a href="#" class="view_data btn btn-sm btn-warning" data-toggle="modal" data-target="#ModalEditDataAngkatan" id="<?php echo $res['id_angkatan']; ?>">Edit</a>
+              <td class="align-middle"><?= $no++ ?></td>
+              <td class="align-middle"><?= $res['nama_angkatan'] ?></td>
+              <td class="align-middle"><?= format_rupiah($res['biaya']) ?></td>
+              <td class="d-flex align-content-sm-between justify-content-center align-middle">
+                <a href="editdataangkatan.php?id_angkatan=<?= $res['id_angkatan'] ?>" class="btn btn-sm btn-danger mr-2" onclick="return confirm('Apakah Yakin Ingin Menghapus Data?')"><i class="fad fa-trash"></i></a>
+                <a href="#" class="view_data btn btn-sm btn-warning" data-toggle="modal" data-target="#ModalEditDataAngkatan" id="<?php echo $res['id_angkatan']; ?>"><i class="fad fa-edit fa-md"></i></a>
               </td>
             </tr>
           <?php endwhile; ?>
@@ -130,46 +130,46 @@ if (isset($_POST['simpan'])) {
         $query = "INSERT INTO angkatan (nama_angkatan,biaya) values('$nama_angkatan','$biaya')";
         $exec = mysqli_query($conn, $query);
         if ($exec) {
+
+          // $msg_success = "<h6>Data angkatan berhasil disimpan <i class='fad fa-smile-beam'></i></h6>";
+          // $msgRef = "show";
           echo "<script>alert('Data angkatan berhasil disimpan')
           document.location = 'editdataangkatan.php';
           </script>";
-
-          $msg_success = "<h6>Data angkatan berhasil disimpan <i class='fad fa-smile-beam'></i></h6>";
-          $msgRef = "show";
         } else {
-          // echo "<script>alert('Data angkatan Gagal disimpan')
-          // document.location = 'editdataangkatan.php';
-          // </script>";
 
-          $msg_failed = "<h6>Data angkatan Gagal disimpan <i class='fad fa-smile-beam'></i></h6>";
-          $msgRef = "show";
+          // $msg_failed = "<h6>Data angkatan Gagal disimpan <i class='fad fa-smile-beam'></i></h6>";
+          // $msgRef = "show";
+          echo "<script>alert('Data angkatan Gagal disimpan')
+          document.location = 'editdataangkatan.php';
+          </script>";
         }
       } else {
-        // echo "<script>alert('Biaya harus berupa angka & tanpa tanda titik/koma!')
-        // document.location = 'editdataangkatan.php';
-        // </script>;
-        // ";
 
-        $msg_failed = "<h6>Biaya harus berupa angka & tanpa tanda titik/koma <i class='fad fa-smile-beam'></i></h6>";
-        $msgRef = "show";
+        // $msg_failed = "<h6>Biaya harus berupa angka & tanpa tanda titik/koma <i class='fad fa-smile-beam'></i></h6>";
+        // $msgRef = "show";
+        echo "<script>alert('Biaya harus berupa angka & tanpa tanda titik/koma!')
+        document.location = 'editdataangkatan.php';
+        </script>;
+        ";
       }
     } else {
-      // echo "<script>alert('Biaya SPP Angkatan tidak boleh kosong!')
-      // document.location = 'editdataangkatan.php';
-      // </script>;
-      // ";
 
-      $msg_failed = "<h6>Biaya SPP Angkatan tidak boleh kosong <i class='fad fa-smile-beam'></i></h6>";
-      $msgRef = "show";
+      // $msg_failed = "<h6>Biaya SPP Angkatan tidak boleh kosong <i class='fad fa-smile-beam'></i></h6>";
+      // $msgRef = "show";
+      echo "<script>alert('Biaya SPP Angkatan tidak boleh kosong!')
+      document.location = 'editdataangkatan.php';
+      </script>;
+      ";
     }
   } else {
-    // echo "<script>alert('Nama angkatan tidak boleh kosong!')
-    // document.location = 'editdataangkatan.php';
-    // </script>;
-    // ";
 
-    $msg_failed = "<h6>Nama angkatan tidak boleh kosong <i class='fad fa-smile-beam'></i></h6>";
-    $msgRef = "show";
+    // $msg_failed = "<h6>Nama angkatan tidak boleh kosong <i class='fad fa-smile-beam'></i></h6>";
+    // $msgRef = "show";
+    echo "<script>alert('Nama angkatan tidak boleh kosong!')
+    document.location = 'editdataangkatan.php';
+    </script>;
+    ";
   }
 }
 
@@ -217,41 +217,41 @@ if (isset($_POST['edit'])) {
         $query = "UPDATE angkatan SET nama_angkatan = '$nama_angkatan', biaya = '$biaya' WHERE id_angkatan = '$id_angkatan'";
         $exec = mysqli_query($conn, $query);
         if ($exec) {
-          // echo "<script>alert('data angkatan berhasil diedit')
-          // document.location = 'editdataangkatan.php' </script>;
-          // ";
-          $msg_success = "<h6>Data angkatan berhasil diedit <i class='fad fa-smile-beam'></i></h6>";
-          $msgRef = "show";
+          echo "<script>alert('data angkatan berhasil diedit')
+          document.location = 'editdataangkatan.php' </script>;
+          ";
+          // $msg_success = "<h6>Data angkatan berhasil diedit <i class='fad fa-smile-beam'></i></h6>";
+          // $msgRef = "show";
         } else {
-          // echo "<script>alert('data angkatan gagal diedit')
-          // document.location = 'editdataangkatan.php' </script>;
-          // ";
-          $msg_failed = "<h6>Data angkatan gagal diedit <i class='fad fa-smile-beam'></i></h6>";
-          $msgRef = "show";
+          echo "<script>alert('data angkatan gagal diedit')
+          document.location = 'editdataangkatan.php' </script>;
+          ";
+          // $msg_failed = "<h6>Data angkatan gagal diedit <i class='fad fa-smile-beam'></i></h6>";
+          // $msgRef = "show";
         }
       } else {
-        // echo "<script>alert('Biaya harus berupa angka & tanpa tanda titik/koma!')
-        // document.location = 'editdataangkatan.php';
-        // </script>;
-        // ";
-        $msg_failed = "<h6>Biaya harus berupa angka & tanpa tanda titik/koma <i class='fad fa-smile-beam'></i></h6>";
-        $msgRef = "show";
+        echo "<script>alert('Biaya harus berupa angka & tanpa tanda titik/koma!')
+        document.location = 'editdataangkatan.php';
+        </script>;
+        ";
+        // $msg_failed = "<h6>Biaya harus berupa angka & tanpa tanda titik/koma <i class='fad fa-smile-beam'></i></h6>";
+        // $msgRef = "show";
       }
     } else {
-      // echo "<script>alert('Biaya SPP Angkatan tidak boleh kosong!')
-      //   document.location = 'editdataangkatan.php';
-      //   </script>;
-      // ";
-      $msg_failed = "<h6>Biaya SPP Angkatan tidak boleh kosong <i class='fad fa-smile-beam'></i></h6>";
-      $msgRef = "show";
+      echo "<script>alert('Biaya SPP Angkatan tidak boleh kosong!')
+        document.location = 'editdataangkatan.php';
+        </script>;
+      ";
+      // $msg_failed = "<h6>Biaya SPP Angkatan tidak boleh kosong <i class='fad fa-smile-beam'></i></h6>";
+      // $msgRef = "show";
     }
   } else {
-    // echo "<script>alert('Nama angkatan tidak boleh kosong!')
-    // document.location = 'editdataangkatan.php';
-    // </script>;
-    // ";
-    $msg_failed = "<h6>Nama angkatan tidak boleh kosong <i class='fad fa-smile-beam'></i></h6>";
-    $msgRef = "show";
+    echo "<script>alert('Nama angkatan tidak boleh kosong!')
+    document.location = 'editdataangkatan.php';
+    </script>;
+    ";
+    // $msg_failed = "<h6>Nama angkatan tidak boleh kosong <i class='fad fa-smile-beam'></i></h6>";
+    // $msgRef = "show";
   }
 }
 
@@ -264,7 +264,7 @@ if (isset($_POST['edit'])) {
 
 <!-- TOAST: Success -->
 <?php
-if ($msg_success <> "" && $msgRef <> "hide") { ?>
+if ($msg_success <> "" && $msgRef != "hide") { ?>
   <script>
     $.toast({
       title: "<i class='fas fa-thumbs-up'></i>  INFORMASI",
@@ -280,16 +280,18 @@ if ($msg_success <> "" && $msgRef <> "hide") { ?>
 
     // document.location = 'editdataangkatan.php';
     setTimeout(() => {
-      <?php $msgRef = "hide"; ?>
+      <?php
+      // $msgRef = "hide";
+      ?>
       document.location = 'editdataangkatan.php';
-    }, 5000);
+    }, 4000);
   </script>
 <?php } ?>
 
 
 <!-- TOAST: Failed -->
 <?php
-if ($msg_failed <> "" && $msgRef <> "hide") { ?>
+if ($msg_failed <> "" && $msgRef != "hide") { ?>
   <script>
     $.toast({
       title: "<i class='fas fa-exclamation-triangle'></i>  INFORMASI",
@@ -303,8 +305,10 @@ if ($msg_failed <> "" && $msgRef <> "hide") { ?>
     });
 
     setTimeout(() => {
-      <?php $msgRef = "hide"; ?>
+      <?php
+      // $msgRef = "hide"; 
+      ?>
       document.location = 'editdataangkatan.php';
-    }, 5000);
+    }, 4000);
   </script>
 <?php } ?>
