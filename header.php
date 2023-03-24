@@ -6,7 +6,8 @@ $Base_Url = $protocol . $_SERVER['HTTP_HOST'];
 
 $Site_Build = "2023";
 $Curr_Year = date("Y");
-
+$Site_Name = "MI Blablabla";
+$Site_Logo = "img/Logo.jpg";
 
 
 $arrPesan = [];
@@ -38,10 +39,10 @@ if (!isset($_SESSION['admin'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>AP SPP | MI Al-Mukhlisin</title>
+    <title>AP SPP | <?= $Site_Name ?></title>
 
     <!-- Custom fonts for this template-->
-    <link href="img/mi.jpg" rel="icon" type="images/x-icon">
+    <link href="img/Favicon.ico" rel="icon" type="images/x-icon">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -154,7 +155,7 @@ if (!isset($_SESSION['admin'])) {
                 <div class="sidebar-brand-icon rotate-n-15">
 
                 </div>
-                <div class="sidebar-brand-text mx-3">MI Al-Mukhlisin</div>
+                <div class="sidebar-brand-text mx-3"><?= $Site_Name ?></div>
             </a>
 
             <!-- Divider -->

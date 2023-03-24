@@ -1,11 +1,11 @@
 <?php
-
-$namaTabel = "Siswa";
-
 include 'header.php';
 include 'koneksi.php';
 
+$namaTabel = "DAFTAR_SISWA";
+
 if (isset($_GET['id_siswa'])) {
+
     $id_siswa = $_GET['id_siswa'];
     $exec = mysqli_query($conn, "DELETE FROM siswa WHERE id_siswa='$id_siswa'");
     if ($exec) {

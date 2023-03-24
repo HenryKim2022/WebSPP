@@ -162,7 +162,8 @@
                     header: true,
                     exportOptions: {
                         columns: ':visible'
-                    }
+                    },
+                    title: "DATA_" + "<?= $namaTabel ?>",
                 },
                 {
                     text: 'Cetak',
@@ -173,7 +174,7 @@
                         columns: ':visible'
                     },
                     className: 'hide-for-all',
-                    title: '',
+                    title: "DATA_" + "<?= $namaTabel ?>",
                     customize: function(win) {
                         $(win.document.body)
                             .css('font-size', '10pt')
@@ -270,7 +271,8 @@
                     header: true,
                     exportOptions: {
                         columns: ':visible'
-                    }
+                    },
+                    title: "DATA_" + "<?= $namaTabel ?>",
                 },
                 {
                     text: 'Cetak',
@@ -281,7 +283,7 @@
                         columns: ':visible'
                     },
                     className: 'hide-for-all',
-                    title: '',
+                    title: "DATA_" + "<?= $namaTabel ?>",
                     customize: function(win) {
                         $(win.document.body)
                             .css('font-size', '10pt')
@@ -358,7 +360,8 @@
                     header: true,
                     exportOptions: {
                         columns: ':visible'
-                    }
+                    },
+                    title: "DATA_" + "<?= $namaTabel ?>",
                 },
                 {
                     text: 'Cetak',
@@ -369,7 +372,7 @@
                         columns: ':visible'
                     },
                     className: 'hide-for-all',
-                    title: '',
+                    title: "DATA_" + "<?= $namaTabel ?>",
                     customize: function(win) {
                         $(win.document.body)
                             .css('font-size', '10pt')
@@ -452,7 +455,8 @@
                     header: true,
                     exportOptions: {
                         columns: ':visible'
-                    }
+                    },
+                    title: "DATA_" + "<?= $namaTabel ?>",
                 },
                 {
                     text: 'Cetak',
@@ -463,7 +467,7 @@
                         columns: ':visible'
                     },
                     className: 'hide-for-all',
-                    title: '',
+                    title: "DATA_" + "<?= $namaTabel ?>",
                     customize: function(win) {
                         $(win.document.body)
                             .css('font-size', '10pt')
@@ -500,7 +504,7 @@
 
 
 
-<!-- DataTable Tahun Ajaran : Hal Master Data Script -->
+<!-- DataTable Angkatan : Hal Master Data Script -->
 <script>
     $(document).ready(function() {
         var table = $('#dataTableAngkatan').DataTable({
@@ -540,7 +544,8 @@
                     header: true,
                     exportOptions: {
                         columns: ':visible'
-                    }
+                    },
+                    title: "DATA_" + "<?= $namaTabel ?>",
                 },
                 {
                     text: 'Cetak',
@@ -551,7 +556,7 @@
                         columns: ':visible'
                     },
                     className: 'hide-for-all',
-                    title: '',
+                    title: "DATA_" + "<?= $namaTabel ?>",
                     customize: function(win) {
                         $(win.document.body)
                             .css('font-size', '10pt')
@@ -587,7 +592,7 @@
 
 
 
-<!-- DataTable Tahun Ajaran : Hal Master Data Script -->
+<!-- DataTable Kelas : Hal Master Data Script -->
 <script>
     $(document).ready(function() {
         var table = $('#dataTableKelas').DataTable({
@@ -626,7 +631,8 @@
                     header: true,
                     exportOptions: {
                         columns: ':visible'
-                    }
+                    },
+                    title: "DATA_" + "<?= $namaTabel ?>",
                 },
                 {
                     text: 'Cetak',
@@ -637,7 +643,7 @@
                         columns: ':visible'
                     },
                     className: 'hide-for-all',
-                    title: '',
+                    title: "DATA_" + "<?= $namaTabel ?>",
                     customize: function(win) {
                         $(win.document.body)
                             .css('font-size', '10pt')
@@ -675,7 +681,7 @@
 
 
 
-<!-- DataTable Tahun Ajaran : Hal Master Data Script -->
+<!-- DataTable Siswa : Hal Master Data Script -->
 <script>
     $(document).ready(function() {
         var table = $('#dataTableSiswa').DataTable({
@@ -717,7 +723,8 @@
                     header: true,
                     exportOptions: {
                         columns: ':visible'
-                    }
+                    },
+                    title: "DATA_" + "<?= $namaTabel ?>",
                 },
                 {
                     text: 'Cetak',
@@ -728,7 +735,7 @@
                         columns: ':visible'
                     },
                     className: 'hide-for-all',
-                    title: '',
+                    title: "DATA_" + "<?= $namaTabel ?>",
                     customize: function(win) {
                         $(win.document.body)
                             .css('font-size', '10pt')
