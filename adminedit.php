@@ -50,10 +50,10 @@ if (isset($_POST['simpan'])) {
                                     <form class="user" method="post" action="">
                                         <div class="form-group">
                                             <input type="hidden" name="id_admin" value="<?= $res['id_admin'] ?>">
-                                            <input type="text" autocomplete="off" required name="nama_admin" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Nama Akun..." value="<?= $res['nama_admin'] ?>">
+                                            <input type="text" autocomplete="off" required name="nama_admin" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Nama Akun" value="<?= $res['nama_admin'] ?>">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" autocomplete="off" required name="user_admin" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Username..." value="<?= $res['user_admin'] ?>">
+                                            <input type="text" autocomplete="off" required name="user_admin" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" value="<?= $res['user_admin'] ?>">
                                         </div>
                                         <div class="form-group">
                                             <input autocomplete="off" type="password" required name="pass_admin" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" value="<?= $res['pass_admin'] ?>">

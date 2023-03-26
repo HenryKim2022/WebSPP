@@ -6,7 +6,7 @@ $Base_Url = $protocol . $_SERVER['HTTP_HOST'];
 
 $Site_Build = "2023";
 $Curr_Year = date("Y");
-$Site_Name = "MI Blablabla";
+$Site_Name = "An-Nur Islamic Full Day School";
 $Site_Logo = "img/Logo.jpg";
 
 
