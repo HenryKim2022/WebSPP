@@ -13,7 +13,7 @@ if (isset($_POST['id_siswa'])) {
     <input type="text" class="form-control mb-2" name="" disabled="" value="<?= $res['nis'] ?>">
     <input type="text" class="form-control mb-2" name="nama" value="<?= $res['nama'] ?>">
     <input type="text" name="tempat_lahir" placeholder="Tempat Lahir" class="form-control mb-2" value="<?= $res['tempat_lahir'] ?>">
-    <input type="text" name="tangal_lahir" placeholder="Tanggal Lahir" class="form-control mb-2" value="<?= $res['tanggal_lahir'] ?>">
+    <input type="date" name="tanggal_lahir" placeholder="Tanggal Lahir" class="form-control mb-2" value="<?= $res['tanggal_lahir'] ?>">
     <select class="form-control mb-2" name="gender">
       <option selected="">Jenis Kelamin</option>
       <option value="L" <?php if ($res['gender'] == 'L') { ?> selected="selected" <?php } ?>>Laki-laki</option>
