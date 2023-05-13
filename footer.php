@@ -71,7 +71,7 @@
 
 
 <!-- PRELOADER SCRIPT -->
-<script>
+<!-- <script>
     document.onreadystatechange = function() {
         if (document.readyState !== "complete") {
             document.querySelector(
@@ -85,7 +85,7 @@
                 "body").style.visibility = "visible";
         }
     };
-</script>
+</script> -->
 <!-- /.PRELOADER SCRIPT -->
 
 
@@ -819,6 +819,7 @@ foreach ($arrPesan as $value) {     ?>
                 stackable: true,
                 pauseDelayOnHover: true,
                 position: 'top-right',
+                newestOnTop: true,
                 content: "<?= $value ?>",
                 type: 'info',
                 delay: 100000

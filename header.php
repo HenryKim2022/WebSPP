@@ -140,7 +140,7 @@ if (!isset($_SESSION['admin'])) {
     </style>
 </head>
 
-<div id="preloader" class="center"></div>
+<!-- <div id="preloader" class="center"></div> -->
 <!-- /.PRELOADER -->
 
 <body id="page-top">
