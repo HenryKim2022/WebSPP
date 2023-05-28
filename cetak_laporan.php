@@ -210,39 +210,7 @@ if (isset($_SESSION['admin'])) {
 					</td>
 				</tr>
 			</table>
-			<tfoot>
-				<!-- <div class="container" style="text-align: right">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="invoice-title">
-								<h2>Invoice</h2>
-								<h3 class="pull-right">Order # 12345</h3>
-							</div>
-							<hr>
-							<div class="row">
-								<div class="col-xs-6">
-									<address>
-										<strong>Billed To:</strong><br>
-										John Smith<br>
-										1234 Main<br>
-										Apt. 4B<br>
-										Springfield, ST 54321
-									</address>
-								</div>
-								<div class="col-xs-6 text-right">
-									<address>
-										<strong>Shipped To:</strong><br>
-										Jane Smith<br>
-										1234 Main<br>
-										Apt. 4B<br>
-										Springfield, ST 54321
-									</address>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-			</tfoot>
+			<tfoot></tfoot>
 
 
 

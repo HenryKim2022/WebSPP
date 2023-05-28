@@ -173,9 +173,6 @@ if (!empty($_POST['tgl_awal']) || !empty($_POST['tgl_akhir'])) {
     } else {
       $spp = mysqli_query($conn, "SELECT siswa.*,pembayaran.*,kelas.* FROM siswa,pembayaran,kelas WHERE pembayaran.id_siswa = siswa.id_siswa AND tglbayar BETWEEN '$awal' AND '$akhir' order by nama ASC");
     }
-    // $spp = mysqli_query($conn, "SELECT siswa.*,pembayaran.*,kelas.* FROM siswa,pembayaran,kelas WHERE pembayaran.id_siswa = siswa.id_siswa AND tglbayar BETWEEN '$awal' AND '$akhir' order by nama ASC");
-    // $spp = mysqli_query($conn, "SELECT siswa.*,pembayaran.*,kelas.* FROM siswa,pembayaran,kelas WHERE pembayaran.id_siswa = siswa.id_siswa AND tglbayar IN('$awal', '$akhir') order by nama ASC");
-    // $spp = mysqli_query($conn, "SELECT siswa.*,pembayaran.*,kelas.* FROM siswa,pembayaran,kelas WHERE pembayaran.id_siswa = siswa.id_siswa AND tglbayar >= $awal AND tglbayar <= $akhir order by nama ASC");
   }
 
 
