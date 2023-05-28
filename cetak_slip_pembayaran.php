@@ -39,11 +39,15 @@ if (isset($_SESSION['admin'])) {
 
 
 		<?php
+		// QUERY
 		$nis = $_GET['nis'];
 		$siswa = mysqli_query($conn, "SELECT siswa.*,angkatan.*,tahun.*,kelas.* FROM siswa,angkatan,tahun,kelas WHERE siswa.id_angkatan = angkatan.id_angkatan AND siswa.id_tahun = tahun.id_tahun AND  siswa.id_kelas = kelas.id_kelas AND siswa.nis = '$nis'");
 		$sw = mysqli_fetch_assoc($siswa);
 		$idspp = $_GET['id'];
 		?>
+
+		<!--  -->
+		<!-- HTML TABLE -->
 		<table>
 			<tr>
 				<td>Nama Siswa </td>
