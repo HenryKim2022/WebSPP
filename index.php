@@ -116,7 +116,7 @@ while ($res =  mysqli_fetch_assoc($exec2)) {
                                 <td>
                                     <div class="text-xs font-weight-bold text-uppercase mb-1 mt-1 justify-content-center" style="color:#f6503b;">
                                         <a>
-                                            Mo~Tec (Modern Technology)
+                                            MoTec (Modern Technology)
                                         </a>
                                         <div class="text-xs font-weight-lighter text-uppercase mb-1 mt-1">
                                             <a>

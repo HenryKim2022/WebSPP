@@ -780,7 +780,7 @@
 <!--  -->
 <!-- DATA MASTER: CHECKING -->
 <?php {
-    $arrTable = ['siswa', 'angkatan', 'tahun', 'kelas'];
+    $arrTable = ['angkatan', 'tahun', 'kelas', 'siswa'];
     // $arrPesan = [];
 
     $table = "";

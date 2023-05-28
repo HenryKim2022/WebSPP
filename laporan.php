@@ -56,7 +56,6 @@ include 'koneksi.php';
         var tgl_awal = $("#awal").val();
         var tgl_akhir = $("#akhir").val();
 
-
         e.preventDefault();
         if (tgl_awal && tgl_akhir) {
             $.ajax({
