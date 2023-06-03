@@ -34,7 +34,7 @@ if (isset($_SESSION['admin'])) {
 					LAPORAN PEMBAYARAN SPP
 					<br>
 					<b>
-						MADRASAH IBTIDAIYAH AL-MUKHLISIN
+						AN-NUR ISLAMIC FULLDAY SCHOOL
 					</b>
 				</h3>
 				<hr>
